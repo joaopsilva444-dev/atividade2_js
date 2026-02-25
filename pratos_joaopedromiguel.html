@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratos</title>
+</head>
+<body>
+    <h1>O que você gostaria de comer?</h1>
+    <p>1:Pizza</p>
+    <p>2:Hamburguer</p>
+    <p>3:Sushi</p>
+    <p>4:Salada</p>
+    <button onclick="checarPedido()">Fazer Pedido</button>
+    <div id="opcao"></div>
+
+    <script>
+        function checarPedido(){
+         let pedido = prompt ("Oque você gostaria de comer meu nobre?").toUpperCase();
+
+         let escolhaPedido = "";
+            switch(pedido){
+                case "1":
+                    escolhaPedido = "Certo, vou fazer sua Pizza meu nobre!";
+                    break;
+                case "2":
+                    escolhaPedido = "Certo, vou fazer seu Hamburguer meu nobre!";
+                    break;
+                case "3":
+                    escolhaPedido = "Certo, vou fazer seu Sushi meu nobre!";
+                    break;
+                case "4":
+                    escolhaPedido = "Certo, vou fazer sua Salada meu nobre! (mesmo nao entendendo o pq vc quer comer salada ;-;)";
+                    break;
+                default:
+                    escolhaPedido = "tem essa comida nao man";
+                    break;
+            }
+             document.getElementById("opcao").innerHTML = `
+            ${escolhaPedido}.
+            `;
+        }
+    
+       
+    </script>
+</body>
+</html>
